@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>KE-kartu nama digital</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            padding: 15px 30px;
+            color:black;
+        }
+        #logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        nav{
+            display: flex;
+            gap: 15px;
+        }
+        nav a{
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #80deea;
+        }
+        #button-container {
+            display: flex;
+            justify-content: center;
+            gap:15px;
+            padding-top: 5px;
+            color: black;
+        }
+        #button {
+            background-color: #25cbdd;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                flex-wrap: wrap;
+            }
+        }
+        #button:hover {
+            background-color: #00796b;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Bookman Old Style';
+        }
+
+        p {
+            font-family: 'Bookman Old Style';
+            color: black;
+        }
+
+        .para {
+            margin: 0px 50px 0px 50px;
+            text-align: justify;
+            padding-bottom: 50px;
+        }
+
+        h3 {
+            font-family: 'Bookman Old Style';
+            text-align: center;
+        }
+        .container1 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .image1 {
+            flex: 1;
+            min-width: 200px;
+            max-width: 50%;
+        }
+        .image1 img {
+            width: 100%;
+            height: auto;
+        }
+        .text1 {
+            flex: 1;
+            padding: 20px;
+            min-width: 200px;
+        }
+        @media (max-width: 600px) {
+            .container1 {
+                flex-direction: column;
+            }
+            .image1, .text1 {
+                max-width: 100%;
+            }
+        }
+        .profil{
+            margin-top: 50px;
+        }
+        .container2 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .text2 {
+            flex: 1;
+            padding: 20px;
+            min-width: 200px;
+        }
+        .image2 {
+            flex: 1;
+            min-width: 200px;
+            max-width: 50%;
+        }
+        .image2 img {
+            width: 100%;
+            height: auto;
+        }
+        @media (max-width: 600px) {
+            .container2 {
+                flex-direction: column;
+            }
+            .text2, .image2 {
+                max-width: 100%;
+            }
+        }
+        footer {
+            background-color: black;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .logo{
+            width: 100%; 
+            height: auto; 
+            padding-left: 130px;
+        }
+        footer .socials {
+            display: flex;
+            margin-top: 15px;
+            padding-left: 50px;
+        }
+        footer .socials a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+        }
+        .email{
+            text-align: center;
+        }
+        .hakcipta{
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+        }
+        .visi{
+            color: white;
+        }
+        .misi{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="GAMBAR/logo (2).png" alt="logo" width="60" height="60">
+        </div>
+        <nav>
+            <a href="menu.html">Menu</a>
+            <a href="profil.html">Profil</a>
+            <a href="produk.html">Produk</a>
+            <a href="penilaian.html">Penilaian</a>
+        </nav>
+        <div id="button-container">
+            <button id="button">
+                <a href="daftar.html">Daftar</a>
+            </button>
+            <button id="button">
+                <a href="masuk.html">Masuk</a>
+            </button>
+        </div>
+    </header>
+
+    <h1 class="profil">Tentang Kami</h1>
+        <p class="para">Kartu nama digital dirancang dengan visual yang menarik untuk berbagi informasi kontak dan profil profesional. Informasi dapat diperbarui dengan mudah, memungkinkan pengguna untuk menjaga konten tetap relevan tanpa perlu mencetak ulang. Dapat menyertakan tautan ke media sosial, situs web pribadi, portofolio online, dan lainnya, memungkinkan penerima untuk menjelajahi lebih lanjut tentang individu atau bisnis. </p><br>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 bg-primary text-white p-3">
+            <h3>Visi</h3>
+            <p class="visi">Kartu nama digital dibuat untuk memenuhi kebutuhan modern dalam berbagi informasi kontak dan profil profesional secara efisien dan menarik.</p>
+        </div>
+        <div class="col-sm-6 bg-dark text-white p-3">
+            <h3>Misi</h3>
+            <ul>
+                <li><p class="misi">Meningkatkan kemudahan dalam membangun dan memperluas jaringan profesional dengan memungkinkan pengguna berbagi informasi kontak dengan cepat dan mudah.</p></li>
+                <li><p class="misi">Memungkinkan pengguna untuk memperbarui informasi dengan cepat dan mudah, tanpa perlu mencetak ulang kartu nama.</p></li>
+                <li><p class="misi">Membantu individu dan bisnis meningkatkan visibilitas mereka secara online melalui desain yang menarik dan konten yang informatif.</p></li>
+            </ul>
+        </div>
+      </div>
+    <div>
+
+    <div class="container1">
+        <div class="image1">
+            <h2>Judul Teks</h2>
+            <img src="https://via.placeholder.com/300" alt="Gambar Contoh">
+        </div>
+        <div class="text1">
+            <p>Ini adalah deskripsi teks yang menjelaskan gambar di sebelah kiri. Teks ini bisa diperluas sesuai kebutuhan.</p>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="text2">
+            <p>Ini adalah deskripsi teks yang menjelaskan gambar di sebelah kanan. Teks ini bisa diperluas sesuai kebutuhan.</p>
+        </div>
+        <div class="image2">
+            <img src="GAMBAR/logo (2).png" alt="Gambar Contoh">
+        </div>
+    </div>
+
+    <footer>
+        <div class="logo">
+            <img src="GAMBAR/logo (2).png" alt="logo" width="60px" height="60px">
+        </div>
+        <div class="socials">
+            <a href="#"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="linkedin"></i></a>
+            <a href="#"><i data-feather="youtube"></i></a>
+            <a href="#"><i data-feather="message-circle"></i></a>
+        </div>
+        <div class="email">
+            <p>More questions? Email us at </p>
+            <a href="#">admission@card.co</a>
+        </div>
+        <div class="hakcipta">© 2024 company card digital</div>
+    </footer>
+      
+    <script>
+        feather.replace();
+    </script>
+
+</body>
+</html>

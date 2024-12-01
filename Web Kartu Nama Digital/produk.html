@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KE-kartu nama digital</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            padding: 15px 30px;
+            color:black;
+        }
+        #logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        nav{
+            display: flex;
+            gap: 15px;
+        }
+        nav a{
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #80deea;
+        }
+        #button-container {
+            display: flex;
+            justify-content: center;
+            gap:15px;
+            padding-top: 5px;
+            color: black;
+        }
+        #button {
+            background-color: #25cbdd;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                flex-wrap: wrap;
+            }
+        }
+        #button:hover {
+            background-color: #00796b;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px 0;
+        }
+        .images {
+            display: flex;
+            overflow-x: auto; 
+            width: 100%; 
+            padding: 20px 0;
+            scroll-behavior: smooth; 
+        }
+        .image-container {
+            width: 100px;
+            height: 100px;
+            margin: 0 15px;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            flex-shrink: 0; 
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px; 
+        }
+        button:hover {
+            background-color: #004d40;
+        }
+        p {
+          margin-top: 6px;
+        }
+        .katalog {
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        }
+
+        .kata1 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .katalog .namaproduk {
+            text-align: center;
+            font-family: "Kanit", serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        table {
+            width: 100%; /* Menggunakan 100% agar responsif */
+            max-width: 600px; /* Maksimum lebar tabel */
+            margin: 0 auto; /* Pusatkan tabel */
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .nama-kolom {
+            background-color: #ddd;
+        }
+
+        tr {
+            background-color: silver;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        tr:hover {
+            transform: scale(1.02);
+        }
+
+        td img {
+            width: 100%; /* Menggunakan 100% untuk responsif */
+            height: auto; /* Mengatur tinggi otomatis untuk menjaga proporsi */
+            object-fit: cover;
+            border-radius: 5px;
+            display: block; /* Memastikan gambar berada di blok */
+        }
+
+        table, th, td {
+            display: block;
+            width: 100%;
+        }
+
+        tr {
+            display: flex;
+            flex-direction: column;
+        }
+
+        td {
+            margin-bottom: 10px;
+        }
+
+        /* Mengatur tampilan pada perangkat kecil */
+        @media (max-width: 600px) {
+            .nama-kolom, th {
+                display: none; /* Sembunyikan header pada tampilan kecil */
+            }
+            tr {
+                flex-direction: column; /* Menyusun ulang menjadi kolom */
+                margin-bottom: 15px; /* Jarak antar baris */
+                border: 1px solid #ddd; /* Tambahkan border */
+                border-radius: 8px; /* Sudut melengkung */
+            }
+            td {
+                padding: 10px; /* Mengurangi padding untuk tampilan kecil */
+            }
+        }
+        footer {
+            background-color: black;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .logo{
+            width: 100%; 
+            height: auto; 
+            padding-left: 130px;
+        }
+        footer .socials {
+            display: flex;
+            margin-top: 15px;
+            padding-left: 50px;
+        }
+        footer .socials a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+        }
+        .email{
+            text-align: center;
+        }
+        .hakcipta{
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="GAMBAR/logo (2).png" alt="logo" width="60" height="60">
+        </div>
+        <nav>
+            <a href="menu.html">Menu</a>
+            <a href="profil.html">Profil</a>
+            <a href="produk.html">Produk</a>
+            <a href="penilaian.html">Penilaian</a>
+        </nav>
+        <div id="button-container">
+            <button id="button">
+                <a href="daftar.html">Daftar</a>
+            </button>
+            <button id="button">
+                <a href="masuk.html">Masuk</a>
+            </button>
+        </div>
+    </header>
+
+    <div class="katalog">
+        <p class="kata1">
+          Kami menyediakan beberapa katalog desain sebagai contoh. Temukan desain dan iformasi yang sesuai
+          dengan gaya Anda!
+        </p>
+        <table>
+          <tr class="nama-kolom">
+            <th>Informasik yang anda butuhkan.</th>
+            <th>Desain yang anda inginkan.</th>
+            <th>Bisa anda dapatkan di website kami, hubungu call center yang tertera dibawah!</th>
+          </tr>
+          <tr>
+            <td class="namaproduk">Contoh desain</td>
+            <td>
+              <img src="Gambar/tas.jpg" alt="desain kartu nama"/>
+            </td>
+            <td>
+              Terbuat dari benang akrilik premium, pilihan warna yang beragam,
+              dilengkapi dengan tali panjang yang dapat disesuaikan. Tidak hanya
+              menarik secara visual tetapi juga fungsional.
+            </td>
+          </tr>
+          <tr>
+            <td class="namaproduk">Contoh desain</td>
+            <td><img src="Gambar/aksesoris.jpg" alt="desain kartu nama"></td>
+            <td>
+              Aksesoris berupa boneka (ukuran kecil), bando, serta gantungan kunci.
+              Aksesori yang sempurna untuk menambah pesona penampilan Anda. Terbuat
+              dari benang akrilik yang aman, nyaman dan tahan lama.
+            </td>
+          </tr>
+          <tr>
+            <td class="namaproduk">Contoh desain</td>
+            <td>
+              <img src="Gambar/vest.jpg" alt="desain kartu nama"/>
+            </td>
+            <td>
+              100% benang akrilik premium, lembut dan hangat. Dilengkapi dengan
+              kancing depan yang elegan dan saku yang nyaman untuk menyimpan
+              barang-barang kecil.
+            </td>
+          </tr>
+        </table>
+      </div>
+
+    <footer>
+        <div class="logo">
+            <img src="GAMBAR/logo (2).png" alt="logo" width="60px" height="60px">
+        </div>
+        <div class="socials">
+            <a href="#"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="linkedin"></i></a>
+            <a href="#"><i data-feather="youtube"></i></a>
+            <a href="#"><i data-feather="message-circle"></i></a>
+        </div>
+        <div class="email">
+            <p>More questions? Email us at </p>
+            <a href="#">admission@card.co</a>
+        </div>
+        <div class="hakcipta">© 2024 company card digital</div>
+    </footer>
+      
+    <script>
+        feather.replace();
+    </script>
+
+</body>
+</html>

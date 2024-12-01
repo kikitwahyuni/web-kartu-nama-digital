@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KE-kartu nama digital</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            padding: 15px 30px;
+            color:black;
+        }
+        #logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        nav{
+            display: flex;
+            gap: 15px;
+        }
+        nav a{
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #80deea;
+        }
+        #button-container {
+            display: flex;
+            justify-content: center;
+            gap:15px;
+            padding-top: 5px;
+            color: black;
+        }
+        #button {
+            background-color: #25cbdd;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                flex-wrap: wrap;
+            }
+        }
+        #button:hover {
+            background-color: #00796b;
+        }
+        .container {
+          width: 80%;
+          background: white;
+          border-radius: 6px;
+          padding: 20px 60px 40px 40px;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0,2);
+        }
+        .container .content {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .container .content .kiri {
+          width: 25%;
+          height: 100%;
+          position: relative;
+        }
+        .container .content .kiri::before {
+          content: '';
+          position: absolute;
+          height: 70%;
+          width: 2px;
+          right: -15px;
+          top: 50%;
+          background: #afafb6;
+          transform: translateY(-50%);
+        }
+        .container .content .kiri .detail {
+          margin: 14px;
+          text-align: center;
+        }
+        .container .content .kiri .detail i {
+          font-size: 30px;
+          color:#80deea;
+          margin-bottom: 10px;
+        }
+        .container .content .kiri .detail .detail-alamat{
+          font-size: 18px;
+          font-weight: 500;
+        }
+        .container .content .kiri .detail .kalimat1 {
+          font-size: 14px;
+          color: #afafb6;
+        }
+        .container .content .kanan {
+          width: 75%;
+          margin-left: 75px;
+        }
+
+        .container .content .kanan .saran{
+          font-family: "Bookman Old Style";
+          font-size: 23px;
+          font-weight: 600;
+          color: #04a6bb;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        .container .content .kanan table {
+          height: 50px;
+          width: 100%;
+          margin: 12px 0;
+        }
+        .container .content .form [type="text"]{
+          height: 100%;
+          width: 100%;
+          border: none;
+          font-size: 15px;
+          padding: 0 20px;
+          font-weight: 200;
+          margin-top: 6px;
+          background: #F0F1F8;
+        }
+        .container .content .form [type="radio"]{
+          margin-top: 6px;
+        }
+        .container .content .form .textarea {
+          height: 100%;
+          width: 100%;
+          border: none;
+          border-radius: 6px;
+          background: #F0F1F8;
+          font-size: 16px;
+          padding: 0 15px;
+          min-height: 110px;
+          margin-top: 6px;
+        }
+        .container .content .form input[type="button"] {
+          color: #fff;
+          font-size: 18px;
+          outline: none;
+          border: none;
+          padding: 8px 16px;
+          border-radius: 6px;
+          background: #80deea;
+          transition: all 0,3s ease;
+          cursor:pointer;
+        }
+        .container .content .form input[type="button"]:hover {
+          background: #80deea;
+        }
+        p {
+          margin-top: 6px;
+        }
+        footer {
+            background-color: black;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .logo{
+            width: 100%; 
+            height: auto; 
+            padding-left: 130px;
+        }
+        footer .socials {
+            display: flex;
+            margin-top: 15px;
+            padding-left: 50px;
+        }
+        footer .socials a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+        }
+        .email{
+            text-align: center;
+        }
+        .hakcipta{
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+          <img src="GAMBAR/logo (2).png" alt="logo" width="60" height="60">
+      </div>
+      <nav>
+          <a href="menu.html">Menu</a>
+          <a href="profil.html">Profil</a>
+          <a href="produk.html">Produk</a>
+          <a href="penilaian.html">Penilaian</a>
+      </nav>
+      <div id="button-container">
+          <button id="button">
+              <a href="daftar.html">Daftar</a>
+          </button>
+          <button id="button">
+              <a href="masuk.html">Masuk</a>
+          </button>
+      </div>
+  </header>
+    
+    <div class="container">
+      <div class="content">
+        <div class="kiri">
+          <div class="alamat detail">
+            <i data-feather="map-pin"></i>
+            <div class="detail-alamat">Alamat</div>
+            <div class="kalimat1">Jl. Pemuda No.2</div>
+          </div>
+          
+          <div class="telepon detail">
+            <i data-feather="phone"></i>
+            <div class="no-telp">Call Center</div>
+            <div class="kalimat1">+62 812-1537-6856</div>
+          </div>
+          
+          <div class="email detail">
+            <i data-feather="mail"></i>
+            <div class="email">E-mail</div>
+            <div class="kalimat1">admissio
+            @card.co</div>
+          </div>
+        </div>
+        
+        <div class="kanan">
+          <div class="saran">Penilaian</div>
+          <p>
+            Berikan website kami penilaian dan saran Anda, agar bisa menjadi website
+            favorit Anda. Penilaian dan saran Anda sangat berharga bagi kami.
+            Terimakasih:)
+          </p>
+        <form class="form" action="#" autocomplete="on">
+          <table>
+            <tr>
+              <td>
+                <label for="nama">Nama</label>
+              </td>
+              <td>
+                <input type="text"placeholder="Masukkan nama Anda"autofocus required/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="nama">Nama Akun</label>
+              </td>
+              <td>
+                <input type="text"placeholder="Masukkan akun Anda"autofocus required/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="jk">Jenis Kelamin</label>
+              </td>
+              <td>
+                <input type="radio" nama="jk" id="laki-laki" value="laki-laki">Laki-laki
+                <input type="radio" nama="jk" id="perempuan" value="perempuan">Perempuan
+              </td>
+            </tr>
+          </table>
+
+          <p><b>Penilaian Anda</b></p>
+          <textarea class="textarea" nama="text" rows="10" colls="30"></textarea>
+          <p><b>Saran Anda</b></p>
+          <textarea class="textarea" nama="text" rows="10" colls="30"></textarea>
+          <br><br>
+          <input type="button" value="submit">
+          <input type="button" value="reset">
+        </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="logo">
+          <img src="GAMBAR/logo (2).png" alt="logo" width="60px" height="60px">
+      </div>
+      <div class="socials">
+          <a href="#"><i data-feather="instagram"></i></a>
+          <a href="#"><i data-feather="linkedin"></i></a>
+          <a href="#"><i data-feather="youtube"></i></a>
+          <a href="#"><i data-feather="message-circle"></i></a>
+      </div>
+      <div class="email">
+          <p>More questions? Email us at </p>
+          <a href="#">admission@card.co</a>
+      </div>
+      <div class="hakcipta">© 2024 company card digital</div>
+  </footer>  
+    
+    <script>
+      feather.replace();
+    </script>
+
+  </body>
+  </html>
